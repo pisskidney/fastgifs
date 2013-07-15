@@ -14,31 +14,32 @@ requires = [
     'pyramid_debugtoolbar',
     'zope.sqlalchemy',
     'waitress',
-    ]
+]
 
-setup(name='fastgifs',
-      version='0.0',
-      description='fastgifs',
-      long_description=README + '\n\n' + CHANGES,
-      classifiers=[
+setup(
+    name='fastgifs',
+    version='0.0',
+    description='fastgifs',
+    long_description=README + '\n\n' + CHANGES,
+    classifiers=[
         "Programming Language :: Python",
         "Framework :: Pyramid",
         "Topic :: Internet :: WWW/HTTP",
         "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
-        ],
-      author='',
-      author_email='',
-      url='',
-      keywords='web wsgi bfg pylons pyramid',
-      packages=find_packages(),
-      include_package_data=True,
-      zip_safe=False,
-      test_suite='fastgifs',
-      install_requires=requires,
-      entry_points="""\
-      [paste.app_factory]
-      main = fastgifs:main
-      [console_scripts]
-      initialize_fastgifs_db = fastgifs.scripts.initializedb:main
-      """,
-      )
+    ],
+    author='Peter Horvath',
+    author_email='horvthpeter@gmail.com',
+    url='',
+    keywords='web wsgi bfg pylons pyramid',
+    packages=find_packages(),
+    include_package_data=True,
+    zip_safe=False,
+    test_suite='fastgifs',
+    install_requires=requires,
+    entry_points="""\
+    [paste.app_factory]
+    main = fastgifs:main
+    [console_scripts]
+    initialize_fastgifs_db = fastgifs.scripts.initializedb:main
+    """,
+)
